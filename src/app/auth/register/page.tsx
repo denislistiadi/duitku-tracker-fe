@@ -1,39 +1,32 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
 import Logo from "@/assets/logo.webp";
 import Component from "@/components";
 
-export default function Login() {
+export default function Register() {
   return (
     <div
       className={`flex flex-col items-center justify-center p-6 py-10 gap-8 min-h-screen`}
     >
       <h1 className={`text-xl font-bold`}>
-        <Image src={Logo} width={100} height={100} alt="Logo" priority />
+        <Image src={Logo} width={100} height={100} alt="Logo" />
       </h1>
-      <h2 className={`text-2xl font-bold mb-5`}>Welcome Back!</h2>
+      <h2 className={`text-2xl font-bold mb-5`}>Sign Up</h2>
 
       <form className={`w-full`}>
         <div className={`flex flex-col gap-6`}>
+          <Component.Input type="text" placeholder="Full Name" />
           <Component.Input type="email" placeholder="Email Address" />
           <Component.Input type="password" placeholder="Password" />
-          <Component.Button type="submit">Login</Component.Button>
-          <Link
-            href="/auth/forgot-password"
-            className="text-center text-primary font-semibold"
-          >
-            Forgot Password?
-          </Link>
+          <Component.Button type="submit">Sign Up</Component.Button>
           <p className="text-sm text-center text-secondary">
-            Don’t have an account yet?{" "}
+            Already have an account?{" "}
             <Link
-              href="/auth/register"
+              href="/auth/login"
               className="text-primary font-medium underline"
             >
-              Sign Up
+              Login
             </Link>
           </p>
         </div>
