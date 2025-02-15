@@ -19,6 +19,15 @@ export default function Register() {
           <Component.Input type="text" placeholder="Full Name" />
           <Component.Input type="email" placeholder="Email Address" />
           <Component.Input type="password" placeholder="Password" />
+          <Component.Input type="password" placeholder="Confirm Password" />
+
+          <div className="flex items-center gap-2">
+            <Component.Input type="checkbox" id="terms" className="h-6 w-6" />
+            <label htmlFor="terms" className="text-sm">
+              By signing up, you agree to the Terms of Service and Privacy
+              Policy
+            </label>
+          </div>
           <Component.Button type="submit">Sign Up</Component.Button>
           <p className="text-sm text-center text-secondary">
             Already have an account?{" "}
