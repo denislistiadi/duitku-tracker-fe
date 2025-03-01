@@ -4,12 +4,11 @@ import React from "react";
 interface ButtonProps extends React.ComponentProps<"button"> {
   variant?: "solid" | "outline";
   type?: "button" | "submit" | "reset";
-  buttonClass?: string;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { variant = "solid", type = "button", buttonClass, children, ...props },
+    { variant = "solid", type = "button", className, children, ...props },
     ref
   ) => {
     return (
@@ -20,7 +19,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               ? "bg-primary text-white"
               : "bg-transparent border border-primary text-primary"
           }`,
-          buttonClass
+          className
         )}
         type={type}
         ref={ref}
